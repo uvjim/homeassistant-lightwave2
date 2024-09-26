@@ -69,3 +69,5 @@ There are further service calls:
 
 ## Thanks
 Credit to Warren Ashcroft whose code I used as a base https://github.com/washcroft/LightwaveRF-LinkPlus
+
+Orignal repo: https://github.com/bigbadblunt/homeassistant-lightwave2
