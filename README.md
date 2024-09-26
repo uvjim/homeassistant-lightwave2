@@ -1,4 +1,4 @@
-*Note: This repo is receiving minimal maintenance - [a new version is here](https://github.com/LightwaveSmartHome/homeassistant-lightwave-smart)*
+*Note: This repo is receiving minimal maintenance*
 
 
 
