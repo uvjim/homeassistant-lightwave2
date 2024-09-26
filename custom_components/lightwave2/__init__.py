@@ -124,15 +124,7 @@ async def async_setup_entry(hass, config_entry):
         _LOGGER.debug("Entity registry item %s", entity_entry)
         _LOGGER.debug("Entity gen2 %s", entity_registry.async_get(entity_entry.entity_id))
 
-    forward_setup = hass.config_entries.async_forward_entry_setup
-    hass.async_create_task(forward_setup(config_entry, "switch"))
-    hass.async_create_task(forward_setup(config_entry, "light"))
-    hass.async_create_task(forward_setup(config_entry, "climate"))
-    hass.async_create_task(forward_setup(config_entry, "cover"))
-    hass.async_create_task(forward_setup(config_entry, "binary_sensor"))
-    hass.async_create_task(forward_setup(config_entry, "sensor"))
-    hass.async_create_task(forward_setup(config_entry, "lock"))
-
+    await hass.config_entries.async_forward_entry_setups(config_entry, ["binary_sensor", "climate", "cover", "light", "lock", "sensor", "switch"])
     return True
 
 async def async_remove_entry(hass, config_entry):
